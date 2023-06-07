@@ -54,14 +54,14 @@ def get_list():
             now_path = path_list
         if not osp.exists(now_path):
             show(f"Inside first loop : {now_path} Path not found")
-        print(f"Now path is : {now_path}")
+        # print(f"Now path is : {now_path}")
         f = open(now_path,'r',encoding="utf8")
-        show(f"Inside - {now_path} is openning ")
+        # show(f"Inside - {now_path} is openning ")
         cnt = 0
         for line in f:
             cnt+=1
-            if (cnt%notice_sum==0):
-                print(f"CNT: {cnt}")
+            # if (cnt%notice_sum==0):
+            #     print(f"CNT: {cnt}")
             if 'com.bbn.tc.schema.avro.cdm18.Event' in line or 'com.bbn.tc.schema.avro.cdm18.Host' in line: continue
             if 'com.bbn.tc.schema.avro.cdm18.TimeMarker' in line or 'com.bbn.tc.schema.avro.cdm18.StartMarker' in line: continue
             if 'com.bbn.tc.schema.avro.cdm18.UnitDependency' in line or 'com.bbn.tc.schema.avro.cdm18.EndMarker' in line: continue
@@ -93,8 +93,8 @@ def get_list():
         cnt =0
         for line in f:
             cnt +=1
-            if cnt % notice_sum ==0:
-                print(f"Second Part -- CNT: {cnt}")
+            # if cnt % notice_sum ==0:
+                # print(f"Second Part -- CNT: {cnt}")
             
             if 'com.bbn.tc.schema.avro.cdm18.Event' in line:
                 pattern = re.compile(r'subject\":{\"com.bbn.tc.schema.avro.cdm18.UUID\":\"(.*?)\"}')

@@ -21,19 +21,19 @@ if __name__ == "__main__":
     srcId_list, srcType_list, dstID_list, edgeType_list, timestamp_list=get_list()
     show("Exiting out")
     exit()
-    show("Creating Dataframe")
-    dataset = pd.DataFrame({
-        'SrcID':srcId_list,
-        'SrcType':srcType_list,
-        'DstID':dstID_list,
-        'EdgeType':edgeType_list,
-        'Timestamp':timestamp_list
-    })
+    # show("Creating Dataframe")
+    # dataset = pd.DataFrame({
+    #     'SrcID':srcId_list,
+    #     'SrcType':srcType_list,
+    #     'DstID':dstID_list,
+    #     'EdgeType':edgeType_list,
+    #     'Timestamp':timestamp_list
+    # })
     
-    # print(dataset.head(20))
-    show("Creating Excel File")
-    dataset[:104857].to_excel("ta1-theia-e3-official-3_d.xlsx",index=False)
-    show("Excel File Created")
+    # # print(dataset.head(20))
+    # show("Creating Excel File")
+    # dataset[:104857].to_excel("..\code\\ta1-theia-e3-official-3_d.xlsx",index=False)
+    # show("Excel File Created")
     
 
 
